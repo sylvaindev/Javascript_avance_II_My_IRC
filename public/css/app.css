@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#login-screen, #main-chat-screen {
+  padding-top: 10px;
+}
+.main {
+  padding-top: 10px;
+  text-align: center;
+}
+#conversation {
+  font-size: 18px;
+  margin: 0px;
+  height: 300px;
+  overflow: scroll;
+}
+.final {
+  font-color: #000;
+}
+.interim {
+  font-color: #f00;
+}
+#errors {
+  text-align: center;
+}
+
+.demo-card-wide.mdl-card {
+    width: 480px;
+}
+
+.spacerTop{
+  margin-top: 10px;
+}

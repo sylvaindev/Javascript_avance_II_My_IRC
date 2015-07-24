@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+                        .,,.
+                      ,;;*;;;;,
+                     .-'``;-');;.
+                    /'  .-.  /*;;
+                  .'    \o    \;;               .;;;,
+                 / o      `    \;    ,__.     ,;*;;;*;,
+                 \__, _.__,'   \_.-') __)--.;;;;;*;;;;,
+                  `""`;;;\       /-')_) __)  `\' ';;;;;;
+                     ;*;;;        -') `)_)  |\ |  ;;;;*;
+                     ;;;;|        `---`    O | | ;;*;;;
+                     *;*;\|                 O  / ;;;;;*
+                    ;;;;;/|    .-------\      / ;*;;;;;
+                   ;;;*;/ \    |        '.   (`. ;;;*;;;
+                   ;;;;;'. ;   |          )   \ | ;;;;;;
+                   ,;*;;;;\/   |.        /   /` | ';;;*;
+                    ;;;;;;/    |/       /   /__/   ';;;
+                    '*;;;/     |       /    |      ;*;
+                         `""""`        `""""`     ;'
+
+                            @sylvainmdev
+    -->
+  <title>my_IRC</title>
+  <link rel="stylesheet" type="text/css" href="../components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../components/material-design-lite/material.min.css">
+  <link rel="stylesheet" href="../components/font-awesome/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/flags.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="row spacerTop">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"><div class="alert alert-danger" id="errors"></div></div>
+    <div class="col-md-4"></div>
+  </div>
+
+  <div class="main col-md-6 col-md-offset-3">
+    <div id="login-screen">
+      <p class="lead">Chat application - NodeJS & Socket.io</p>
+      <p>Veuillez entrer un pseudo pour rejoindre le chat.</p>
+        <form class="form-inline" id="nameForm">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+            <input type="text" class="mdl-textfield__input" id="name">
+            <label class="mdl-textfield__label" for="sample1">Votre pseudo</label>
+          </div>
+          <input type="submit" name="join" id="join" value="Rejoindre" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        </form>
+        <p>Design make with Material Design & Bootstrap</p>
+      </div>
+    </div>
+
+    <div class="row" id="main-chat-screen">
+      <div class="col-md-3">
+        <ul id="rooms" class="list-group"></ul>
+        <ul id="people" class="list-group"></ul>
+      </div>
+      <div class="col-md-6 mdl-card mdl-shadow--2dp through mdl-shadow--8dp mdl-card--border demo-card-wide">
+        <div id="conversation">
+          <ul id="msgs" class="list-unstyled"></ul>
+        </div>
+        <form id="chatForm" class="form-inline">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+            <input type="text" class="mdl-textfield__input" id="msg">
+            <label class="mdl-textfield__label" for="sample3">Votre message</label>
+          </div>
+          <input type="submit" name="send" id="send" value="Envoyer" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          <div class="btn-group">
+            <button type="button" id="menu-speed" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" data-toggle="dropdown" >
+              <i class="material-icons">add</i>
+            </button>
+            <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" role="menu" for="menu-speed">
+              <li class="mdl-menu__item" name="createRoom" data-toggle="modal" data-target="#roomModal">Créer une room</li>
+              <li class="mdl-menu__item" name="leave" id="leave">Quitter la room</li>
+              <!--<li><a href="#" name="disconnect" id="disconnect">Se déconnecter du chat</a></li>-->
+            </ul>
+          </div>
+        </form>
+      </div>
+       <div class="col-md-2">
+        <ul class="list-unstyled" id="updates"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal start -->
+  <div class="modal fade" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="createRoomLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="createRoomLabel">Créer une room</h4>
+        </div>
+        <div class="modal-body">
+          Vous pouvez créer une room ici . Les pseudo doivent être uniques :
+          <form class="form-inline" id="createRoomForm">
+            <input type="text" class="form-control input-md"  placeholder="Nom de la room" id="createRoomName">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button data-dismiss="modal" id="createRoomBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Créer une room</button>
+            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+
+  <script src="../components/jquery/dist/jquery.js"></script>
+  <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src=../components/material-design-lite/material.min.js></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/client.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# 
+# Initial commit
+# 
+# Changes to be committed:
+# 
+# 	new file:   .bowerrc
+# 	new file:   .gitignore
+# 	new file:   .idea/.name
+# 	new file:   .idea/advanced-chat-master.iml
+# 	new file:   .idea/jsLibraryMappings.xml
+# 	new file:   .idea/libraries/advanced_chat_master_node_modules.xml
+# 	new file:   .idea/misc.xml
+# 	new file:   .idea/modules.xml
+# 	new file:   .idea/vcs.xml
+# 	new file:   .idea/workspace.xml
+# 	new file:   .openshift/action_hooks/README.md
+# 	new file:   .openshift/cron/README.cron
+# 	new file:   .openshift/cron/daily/.gitignore
+# 	new file:   .openshift/cron/hourly/.gitignore
+# 	new file:   .openshift/cron/minutely/.gitignore
+# 	new file:   .openshift/cron/monthly/.gitignore
+# 	new file:   .openshift/cron/weekly/README
+# 	new file:   .openshift/cron/weekly/chrono.dat
+# 	new file:   .openshift/cron/weekly/chronograph
+# 	new file:   .openshift/cron/weekly/jobs.allow
+# 	new file:   .openshift/cron/weekly/jobs.deny
+# 	new file:   .openshift/markers/.gitkeep
+# 	new file:   README.md
+# 	new file:   bower.json
+# 	new file:   license.md
+# 	new file:   npm-shrinkwrap.json
+# 	new file:   package.json
+# 	new file:   public/css/app.css
+# 	new file:   public/css/flags.css
+# 	new file:   public/css/flags.png
+# 	new file:   public/css/flags.zip
+# 	new file:   public/index.html
+# 	new file:   public/js/client.js
+# 	new file:   room.js
+# 	new file:   server.js
