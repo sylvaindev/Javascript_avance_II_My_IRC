@@ -9,6 +9,6 @@
   <li>underscore</li>
   <li>ejs</li>
   <li>Bootstrap</li>
-  <li>Material Design<li>
+  <li>Material Design</li>
   <li>Font-awesome</li>
 </ul>
